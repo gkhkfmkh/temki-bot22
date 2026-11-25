@@ -171,7 +171,7 @@ def message_as_html(message: Message) -> str:
 
 def render_post(giveaway: dict[str, Any], settings: Settings) -> str:
     title = html.escape(giveaway["title"])
-    prize = html.escape(giveaway["prize_text"]).replace("\n", "<br>")
+    prize = html.escape(giveaway["prize_text"])
     body = giveaway["body_html"].strip()
     deadline = pretty_deadline(giveaway["deadline"], settings)
     text = (
